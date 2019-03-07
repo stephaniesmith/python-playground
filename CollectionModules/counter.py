@@ -1,19 +1,19 @@
 from collections import Counter
 
 l = [1, 1, 1, 1, 12, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5]
-countL = Counter(l)
-print(countL)
+count_l = Counter(l)
+print(count_l)
 
 s = 'lskdjfasdlfksj'
-countS = Counter(s)
-print(countS)
+count_s = Counter(s)
+print(count_s)
 
 w = 'Hello how are you? you?'.split()
-countW = Counter(w)
-print(countW)
+count_w = Counter(w)
+print(count_w)
 
-commonW = countW.most_common()
-print(commonW)
+common_w = count_w.most_common()
+print(common_w)
 
-common1 = countW.most_common(1)
-print(common1)
+common_1 = count_w.most_common(1)
+print(common_1)
