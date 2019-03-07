@@ -33,8 +33,8 @@ class Deck:
     def __init__(self):
         self.deck = []
         for suit in suits:
-        for rank in ranks:
-            self.deck.append(Card(suit, rank))
+            for rank in ranks:
+                self.deck.append(Card(suit, rank))
 
     def __str__(self):
         deck_comp = [card.__str__() for card in self.deck]
@@ -88,8 +88,8 @@ def take_bet(chips):
         else:
             if chips.bet > chips.total:
                 print('Sorry, you do not have enough chips! You have: {}'.format(chips.total))
-        else:
-            break
+            else:
+                break
 
 def hit(deck, hand):
     single_card = deck.deal()
@@ -110,7 +110,7 @@ def hit_or_stand(deck, hand):
         else:
             print('Sorry, I did not understand, Please enter h or s only!')
 
-            break
+        break
 
 def show_some(player, dealer):
     print('DEALERS HAND:')
@@ -172,7 +172,7 @@ while True:
 
         hit_or_stand(deck, player_hand)
 
-        show_some(player_hand, dealer_hand, player_chips)
+        show_some(player_hand, dealer_hand)
 
         if player_hand.value > 21:
             player_busts(player_hand, dealer_hand, player_chips)
